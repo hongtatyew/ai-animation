@@ -1,0 +1,773 @@
+1 + the location information in json format
+{
+  "steps": [
+    {
+      "location": "Sekinchan, Malaysia",
+      "date": "December 31, 2023"
+    },
+    {
+      "location": "Sitiawan, Malaysia",
+      "date": "January 1, 2024"
+    },
+    {
+      "location": "Taiping, Malaysia",
+      "date": "January 2, 2024"
+    },
+    {
+      "location": "Taiping, Malaysia",
+      "date": "January 3, 2024"
+    },
+    {
+      "location": "Sungai Petani, Malaysia",
+      "date": "January 4, 2024"
+    },
+    {
+      "location": "Changlun, Malaysia",
+      "date": "January 5, 2024"
+    },
+    {
+      "location": "Hat Yai, Thailand",
+      "date": "January 6, 2024"
+    },
+    {
+      "location": "Phatthalung, Thailand",
+      "date": "January 7, 2024"
+    },
+    {
+      "location": "Thung Song, Thailand",
+      "date": "January 8, 2024"
+    },
+    {
+      "location": "Surat Thani, Thailand",
+      "date": "January 9, 2024"
+    },
+    {
+      "location": "Tha Kram, Surat Thani, Thailand",
+      "date": "January 10, 2024"
+    },
+    {
+      "location": "Lang Suan, Thailand",
+      "date": "January 11, 2024"
+    },
+    {
+      "location": "Chumphon, Thailand",
+      "date": "January 12, 2024"
+    },
+    {
+      "location": "Hat Wakakron National Park, Thailand",
+      "date": "January 13, 2024"
+    },
+    {
+      "location": "Pran Buri Forest Park, Thailand",
+      "date": "January 14, 2024"
+    },
+    {
+      "location": "Khao Yoi, Thailand",
+      "date": "January 15, 2024"
+    },
+    {
+      "location": "Bangkok, Thailand",
+      "date": "January 16, 2024"
+    },
+    {
+      "location": "Saraburi, Thailand",
+      "date": "January 18, 2024"
+    },
+    {
+      "location": "Sikhio, Thailand",
+      "date": "January 19, 2024"
+    },
+    {
+      "location": "Thephalai, Thailand",
+      "date": "January 20, 2024"
+    },
+    {
+      "location": "Ban Nong Nae, Thailand",
+      "date": "January 21, 2024"
+    },
+    {
+      "location": "Yothathikan Kalasin, Thailand",
+      "date": "January 22, 2024"
+    },
+    {
+      "location": "Sakon Nakhon, Thailand",
+      "date": "January 23, 2024"
+    },
+    {
+      "location": "Thakhek, Laos",
+      "date": "January 24, 2024"
+    },
+    {
+      "location": "Thakhek, Laos",
+      "date": "January 25, 2024"
+    },
+    {
+      "location": "Nikei, Laos",
+      "date": "January 26, 2024"
+    },
+    {
+      "location": "Ban Nape, Laos",
+      "date": "January 27, 2024"
+    },
+    {
+      "location": "Pho Chau, Vietnam",
+      "date": "January 28, 2024"
+    },
+    {
+      "location": "Dien Chau, Vietnam",
+      "date": "January 29, 2024"
+    },
+    {
+      "location": "Thanh Hoa, Vietnam",
+      "date": "January 30, 2024"
+    },
+    {
+      "location": "Chi Ne, Vietnam",
+      "date": "January 31, 2024"
+    },
+    {
+      "location": "Viet Tri, Vietnam",
+      "date": "February 1, 2024"
+    },
+    {
+      "location": "Yen Bai, Vietnam",
+      "date": "February 2, 2024"
+    },
+    {
+      "location": "Lao Cai, Vietnam",
+      "date": "February 3, 2024"
+    },
+    {
+      "location": "Manhao, China",
+      "date": "February 5, 2024"
+    },
+    {
+      "location": "Yuanyang County, China",
+      "date": "February 6, 2024"
+    },
+    {
+      "location": "Jianshui County, China",
+      "date": "February 7, 2024"
+    },
+    {
+      "location": "Tonghai County, China",
+      "date": "February 8, 2024"
+    },
+    {
+      "location": "Kunming, China",
+      "date": "February 9, 2024"
+    },
+    {
+      "location": "Kunming, China",
+      "date": "February 10, 2024"
+    },
+    {
+      "location": "Kunming, China",
+      "date": "February 12, 2024"
+    },
+    {
+      "location": "Songming, China",
+      "date": "March 8, 2024"
+    },
+    {
+      "location": "Dongchuan, China",
+      "date": "March 9, 2024"
+    },
+    {
+      "location": "Yuluxiang, Huize, China",
+      "date": "March 10, 2024"
+    },
+    {
+      "location": "Yiche, China",
+      "date": "March 11, 2024"
+    },
+    {
+      "location": "Zhaotong, China",
+      "date": "March 12, 2024"
+    },
+    {
+      "location": "Daguan Xian, Zhaotong, China",
+      "date": "March 13, 2024"
+    },
+    {
+      "location": "Yongshan, China",
+      "date": "March 14, 2024"
+    },
+    {
+      "location": "Taiping, China",
+      "date": "March 15, 2024"
+    },
+    {
+      "location": "Wutongqiao District, China",
+      "date": "March 16, 2024"
+    },
+    {
+      "location": "Meishan, China",
+      "date": "March 17, 2024"
+    },
+    {
+      "location": "Chengdu, China",
+      "date": "March 18, 2024"
+    },
+    {
+      "location": "Dujiangyan, China",
+      "date": "March 21, 2024"
+    },
+    {
+      "location": "Miansi, China",
+      "date": "March 22, 2024"
+    },
+    {
+      "location": "Goukou, China",
+      "date": "March 23, 2024"
+    },
+    {
+      "location": "Songpan, China",
+      "date": "March 24, 2024"
+    },
+    {
+      "location": "Chuanzhusi, China",
+      "date": "March 25, 2024"
+    },
+    {
+      "location": "Galitai, China",
+      "date": "March 26, 2024"
+    },
+    {
+      "location": "Liujiaxia, China",
+      "date": "March 27, 2024"
+    },
+    {
+      "location": "Yongjing, China",
+      "date": "March 29, 2024"
+    },
+    {
+      "location": "Longquansi, China",
+      "date": "March 30, 2024"
+    },
+    {
+      "location": "Bairi, China",
+      "date": "March 31, 2024"
+    },
+    {
+      "location": "Gulang, China",
+      "date": "April 1, 2024"
+    },
+    {
+      "location": "Wuwei, China",
+      "date": "April 3, 2024"
+    },
+    {
+      "location": "Yongchang County, China",
+      "date": "April 3, 2024"
+    },
+    {
+      "location": "Shandan, China",
+      "date": "April 4, 2024"
+    },
+    {
+      "location": "Zhangye, China",
+      "date": "April 5, 2024"
+    },
+    {
+      "location": "Yuanshanzi, China",
+      "date": "April 6, 2024"
+    },
+    {
+      "location": "Jiuquan, China",
+      "date": "April 7, 2024"
+    },
+    {
+      "location": "Chijin, China",
+      "date": "April 9, 2024"
+    },
+    {
+      "location": "Shuanta, China",
+      "date": "April 10, 2024"
+    },
+    {
+      "location": "Guazhou, China",
+      "date": "April 11, 2024"
+    },
+    {
+      "location": "Malianjing, China",
+      "date": "April 12, 2024"
+    },
+    {
+      "location": "Hami, China",
+      "date": "April 13, 2024"
+    },
+    {
+      "location": "Hami, China",
+      "date": "April 14, 2024"
+    },
+    {
+      "location": "Barkol, China",
+      "date": "April 15, 2024"
+    },
+    {
+      "location": "Xialaoba, China",
+      "date": "April 16, 2024"
+    },
+    {
+      "location": "Mori (木垒）, China",
+      "date": "April 17, 2024"
+    },
+    {
+      "location": "Mori, China",
+      "date": "April 18, 2024"
+    },
+    {
+      "location": "Dahuangxiang (大黄山乡）, China",
+      "date": "April 19, 2024"
+    },
+    {
+      "location": "Urumqi, China",
+      "date": "April 20, 2024"
+    },
+    {
+      "location": "Ürümqi, China",
+      "date": "April 21, 2024"
+    },
+    {
+      "location": "Changji, China",
+      "date": "April 22, 2024"
+    },
+    {
+      "location": "Shihezi (石河子）, China",
+      "date": "April 23, 2024"
+    },
+    {
+      "location": "Kuytun (奎屯), China",
+      "date": "April 24, 2024"
+    },
+    {
+      "location": "Guertu （故尔图）, China",
+      "date": "April 25, 2024"
+    },
+    {
+      "location": "Jinghe (精河), China",
+      "date": "April 26, 2024"
+    },
+    {
+      "location": "Khorgas (霍尔果斯), China",
+      "date": "April 28, 2024"
+    },
+    {
+      "location": "Panfilovskiy, Kazakhstan",
+      "date": "April 30, 2024"
+    },
+    {
+      "location": "Charyn, Kazakhstan",
+      "date": "May 1, 2024"
+    },
+    {
+      "location": "Akbastau, Almaty, Kazakhstan",
+      "date": "May 2, 2024"
+    },
+    {
+      "location": "Almaty, Kazakhstan",
+      "date": "May 3, 2024"
+    },
+    {
+      "location": "Almaty, Kazakhstan",
+      "date": "May 6, 2024"
+    },
+    {
+      "location": "Akterek, Kazakhstan",
+      "date": "May 8, 2024"
+    },
+    {
+      "location": "Bishkek, Kyrgyzstan",
+      "date": "May 9, 2024"
+    },
+    {
+      "location": "Novowoskresenovka, Kazakhstan",
+      "date": "May 10, 2024"
+    },
+    {
+      "location": "Merki, Kazakhstan",
+      "date": "May 11, 2024"
+    },
+    {
+      "location": "Aqyrtobe, Kazakhstan",
+      "date": "May 12, 2024"
+    },
+    {
+      "location": "Jambyl, Kazakhstan",
+      "date": "May 13, 2024"
+    },
+    {
+      "location": "Shymkent, Kazakhstan",
+      "date": "May 14, 2024"
+    },
+    {
+      "location": "Tashkent, Uzbekistan",
+      "date": "May 15, 2024"
+    },
+    {
+      "location": "Tashkent, Uzbekistan",
+      "date": "May 16, 2024"
+    },
+    {
+      "location": "Baht, Uzbekistan",
+      "date": "May 18, 2024"
+    },
+    {
+      "location": "Galaba, Uzbekistan",
+      "date": "May 19, 2024"
+    },
+    {
+      "location": "Samarqand, Uzbekistan",
+      "date": "May 20, 2024"
+    },
+    {
+      "location": "Samarkand City, Uzbekistan",
+      "date": "May 21, 2024"
+    },
+    {
+      "location": "Kattakurgan, Uzbekistan",
+      "date": "May 22, 2024"
+    },
+    {
+      "location": "Kiziltepa, Uzbekistan",
+      "date": "May 23, 2024"
+    },
+    {
+      "location": "Bukhara City, Uzbekistan",
+      "date": "May 24, 2024"
+    },
+    {
+      "location": "Bukhara City, Uzbekistan",
+      "date": "May 25, 2024"
+    },
+    {
+      "location": "Gazli, Uzbekistan",
+      "date": "May 26, 2024"
+    },
+    {
+      "location": "Somewhere in Bukhara desert, Uzbekistan",
+      "date": "May 27, 2024"
+    },
+    {
+      "location": "Tórtkúl rayonı, Uzbekistan",
+      "date": "May 28, 2024"
+    },
+    {
+      "location": "Khiva, Uzbekistan",
+      "date": "May 29, 2024"
+    },
+    {
+      "location": "Khiva, Uzbekistan",
+      "date": "May 30, 2024"
+    },
+    {
+      "location": "Manghit, Uzbekistan",
+      "date": "May 31, 2024"
+    },
+    {
+      "location": "Qońırat rayonı, Uzbekistan",
+      "date": "June 2, 2024"
+    },
+    {
+      "location": "Qoraqalpoghiston, Uzbekistan",
+      "date": "June 3, 2024"
+    },
+    {
+      "location": "Akzhigit, Kazakhstan",
+      "date": "June 4, 2024"
+    },
+    {
+      "location": "Beynue, Kazakhstan",
+      "date": "June 5, 2024"
+    },
+    {
+      "location": "Mangystau, Kazakhstan",
+      "date": "June 6, 2024"
+    },
+    {
+      "location": "Bozdak, Kazakhstan",
+      "date": "June 7, 2024"
+    },
+    {
+      "location": "Beki, Kazakhstan",
+      "date": "June 8, 2024"
+    },
+    {
+      "location": "Aqtau, Kazakhstan",
+      "date": "June 9, 2024"
+    },
+    {
+      "location": "Baku, Azerbaijan",
+      "date": "June 12, 2024"
+    },
+    {
+      "location": "Baku, Azerbaijan",
+      "date": "June 13, 2024"
+    },
+    {
+      "location": "Hajigabul, Azerbaijan",
+      "date": "June 14, 2024"
+    },
+    {
+      "location": "Ujar, Azerbaijan",
+      "date": "June 15, 2024"
+    },
+    {
+      "location": "Ganja-Gazakh, Azerbaijan",
+      "date": "June 16, 2024"
+    },
+    {
+      "location": "Qazakh District, Azerbaijan",
+      "date": "June 17, 2024"
+    },
+    {
+      "location": "Tbilisi, Georgia",
+      "date": "June 18, 2024"
+    },
+    {
+      "location": "Tbilisi, Georgia",
+      "date": "June 20, 2024"
+    },
+    {
+      "location": "Gori Municipality, Georgia",
+      "date": "June 21, 2024"
+    },
+    {
+      "location": "Zestafoni, Georgia",
+      "date": "June 22, 2024"
+    },
+    {
+      "location": "Ureki, Georgia",
+      "date": "June 23, 2024"
+    },
+    {
+      "location": "Batumi, Georgia",
+      "date": "June 24, 2024"
+    },
+    {
+      "location": "Ardeşen, Turkey",
+      "date": "June 25, 2024"
+    },
+    {
+      "location": "Trabzon, Turkey",
+      "date": "June 27, 2024"
+    },
+    {
+      "location": "Karsiyaka, Dibekli, Turkey",
+      "date": "June 28, 2024"
+    },
+    {
+      "location": "Siran, Turkey",
+      "date": "June 29, 2024"
+    },
+    {
+      "location": "Suşehri, Turkey",
+      "date": "June 30, 2024"
+    },
+    {
+      "location": "Hafik, Turkey",
+      "date": "July 1, 2024"
+    },
+    {
+      "location": "Şarkışla, Turkey",
+      "date": "July 2, 2024"
+    },
+    {
+      "location": "Kayseri, Turkey",
+      "date": "July 3, 2024"
+    },
+    {
+      "location": "Göreme, Turkey",
+      "date": "July 4, 2024"
+    },
+    {
+      "location": "Göreme, Turkey",
+      "date": "July 5, 2024"
+    },
+    {
+      "location": "Aksaray, Turkey",
+      "date": "July 6, 2024"
+    },
+    {
+      "location": "Konya, Turkey",
+      "date": "July 7, 2024"
+    },
+    {
+      "location": "Akşehir, Turkey",
+      "date": "July 8, 2024"
+    },
+    {
+      "location": "Afyonkarahisar, Turkey",
+      "date": "July 9, 2024"
+    },
+    {
+      "location": "Uşak, Turkey",
+      "date": "July 10, 2024"
+    },
+    {
+      "location": "Salihli, Turkey",
+      "date": "July 11, 2024"
+    },
+    {
+      "location": "Izmir, Turkey",
+      "date": "July 12, 2024"
+    },
+    {
+      "location": "Çesme, Turkey",
+      "date": "July 13, 2024"
+    },
+    {
+      "location": "Chios, Greece",
+      "date": "July 14, 2024"
+    },
+    {
+      "location": "Athens, Greece",
+      "date": "July 16, 2024"
+    },
+    {
+      "location": "Kiato, Greece",
+      "date": "July 17, 2024"
+    },
+    {
+      "location": "Patras, Greece",
+      "date": "July 18, 2024"
+    },
+    {
+      "location": "Barletta, Italy",
+      "date": "July 19, 2024"
+    },
+    {
+      "location": "Ariano Irpino, Italy",
+      "date": "July 20, 2024"
+    },
+    {
+      "location": "Caianello Vecchio, Italy",
+      "date": "July 21, 2024"
+    },
+    {
+      "location": "Ripi, Italy",
+      "date": "July 22, 2024"
+    },
+    {
+      "location": "Rome, Italy",
+      "date": "July 23, 2024"
+    },
+    {
+      "location": "Rome, Italy",
+      "date": "July 25, 2024"
+    },
+    {
+      "location": "Vetralla, Italy",
+      "date": "July 26, 2024"
+    },
+    {
+      "location": "Ficulle, Italy",
+      "date": "July 27, 2024"
+    },
+    {
+      "location": "Monte San Savino, Italy",
+      "date": "July 28, 2024"
+    },
+    {
+      "location": "Florence, Italy",
+      "date": "July 29, 2024"
+    },
+    {
+      "location": "Castiglione Dei Pepoli, Italy",
+      "date": "July 30, 2024"
+    },
+    {
+      "location": "Mirandola, Italy",
+      "date": "July 31, 2024"
+    },
+    {
+      "location": "Verona, Italy",
+      "date": "August 1, 2024"
+    },
+    {
+      "location": "Venice, Italy",
+      "date": "August 2, 2024"
+    },
+    {
+      "location": "Verona, Italy",
+      "date": "August 3, 2024"
+    },
+    {
+      "location": "Nomi, Italy",
+      "date": "August 4, 2024"
+    },
+    {
+      "location": "Vahrn, Italy",
+      "date": "August 5, 2024"
+    },
+    {
+      "location": "Brixen, Italy",
+      "date": "August 6, 2024"
+    },
+    {
+      "location": "Innsbruck, Austria",
+      "date": "August 7, 2024"
+    },
+    {
+      "location": "Solbad Hall, Austria",
+      "date": "August 8, 2024"
+    },
+    {
+      "location": "Munich, Germany",
+      "date": "August 10, 2024"
+    },
+    {
+      "location": "Munich, Germany",
+      "date": "August 18, 2024"
+    },
+    {
+      "location": "Pfaffenhofen an der Ilm, Germany",
+      "date": "August 19, 2024"
+    },
+    {
+      "location": "Nuremberg, Germany",
+      "date": "August 20, 2024"
+    },
+    {
+      "location": "Bad Staffelstein, Germany",
+      "date": "August 21, 2024"
+    },
+    {
+      "location": "Ilmenau, Germany",
+      "date": "August 22, 2024"
+    },
+    {
+      "location": "Sangerhausen, Germany",
+      "date": "August 24, 2024"
+    },
+    {
+      "location": "Helmstedt, Germany",
+      "date": "August 24, 2024"
+    },
+    {
+      "location": "Bad Bevensen, Germany",
+      "date": "August 25, 2024"
+    },
+    {
+      "location": "Lübeck, Germany",
+      "date": "August 26, 2024"
+    },
+    {
+      "location": "Kosel, Germany",
+      "date": "August 27, 2024"
+    },
+    {
+      "location": "Middelfart, Denmark",
+      "date": "August 28, 2024"
+    },
+    {
+      "location": "Nyborg, Denmark",
+      "date": "August 29, 2024"
+    },
+    {
+      "location": "Copenhagen, Denmark",
+      "date": "August 30, 2024"
+    }
+  ]
+}

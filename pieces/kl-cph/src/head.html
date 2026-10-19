@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kuala Lumpur to Copenhagen, by bike</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #1b1714; overflow: hidden; }
+  body { display: flex; align-items: center; justify-content: center; }
+  canvas { max-width: 100vw; max-height: 100vh; width: auto; height: auto; display: block; cursor: pointer; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1920" height="1080"></canvas>
+<script>
+"use strict";
+// =====================================================================
+//  KUALA LUMPUR TO COPENHAGEN BY BIKE — 16:9, 24fps, 120 BPM, cut paper. F5 fixed-hero journey:
+//  the rider (cobalt jacket) holds his screen spot while the world cuts around him, one place per 1.5s (three beats),
+//  35 places, every cut on the beat. A sticker lands on his pannier for every country completed (16 at the end).
+//  Then the silence, the payoff (Nyhavn, DAY 244), the whole thread, the opening again.
+//  The route is the rider's own log (192 stops, 31 Dec 2023 – 30 Aug 2024).
+// =====================================================================
+const FPS = 24, W = 1920, H = 1080;
+{ const cv = document.getElementById('c'); cv.width = W; cv.height = H; }
+const BPM = 120, GRID0 = 0, BEAT = 60 / BPM, E8 = BEAT / 2, E16 = BEAT / 4;   // 0.5 / 0.25 / 0.125s = 12 / 6 / 3 frames
+// the pace: every place is PLACE seconds (a multiple of the beat); the ending follows the last place
+const PLACE = 1.5, NPLACES = 41, T_SIGN = NPLACES * PLACE, T_HIT = T_SIGN + 2, T_MAP = T_HIT + 3, T_END = T_MAP + 4;
+const DURATION = T_END + 2;
+const NFRAMES = Math.round(DURATION * FPS);
+const LOOP_T = NFRAMES / FPS;
+const SAFE = { top: 60, bottom: 110, right: 60 };
+const HAND = '"Ink Free", "Segoe Print", "Bradley Hand", "Chalkboard SE", "Comic Sans MS", "Comic Neue", cursive';
+const CX = (W - SAFE.right) / 2;
+const onBeat = (t) => +(GRID0 + Math.round((t - GRID0) / E8) * E8).toFixed(4);
+
+// ---- the route log: [t0, kind, place, month (0 = Dec 2023, 1 = Jan ... 8 = Aug), day, countries entered so far, options]
+// kind picks the picture (src/places-*.js). 41 places, one per PLACE seconds; every cut is on the beat.
+const PLACES_ORDER = [
+  ['kl',           'Kuala Lumpur',      0, 31, 1],
+  ['paddy',        'Sekinchan',         0, 31, 1],
+  ['hatyai',       'Hat Yai',           1, 6,  2],
+  ['bangkok',      'Bangkok',           1, 16, 2],
+  ['karst',        'Thakhek',           1, 24, 3],
+  ['vietri',       'Viet Tri',          2, 1,  4],
+  ['vnhills',      'Lao Cai',           2, 3,  4],
+  ['terraces',     'Yuanyang',          2, 6,  5],
+  ['kunming',      'Kunming',           2, 9,  5],
+  ['chengdu',      'Chengdu',           3, 18, 5],
+  ['dujiangyan',   'Dujiangyan',        3, 21, 5],
+  ['danxia',       'Zhangye',           4, 5,  5],
+  ['hami',         'Hami',              4, 13, 5],
+  ['tianshan',     'Ürümqi',            4, 20, 5],
+  ['almaty',       'Almaty',            5, 3,  6],
+  ['bishkek',      'Bishkek',           5, 9,  7],
+  ['registan',     'Samarkand',         5, 20, 8],
+  ['khiva',        'Khiva',             5, 29, 8],
+  ['ferryCaspian', 'Aktau',             6, 9,  8],
+  ['baku',         'Baku',              6, 12, 9],
+  ['tbilisi',      'Tbilisi',           6, 18, 10],
+  ['trabzon',      'Trabzon',           6, 27, 11],
+  ['cappadocia',   'Göreme',            7, 4,  11],
+  ['izmir',        'Izmir',             7, 12, 11],
+  ['ferryChios',   'Chios',             7, 14, 11],
+  ['athens',       'Athens',            7, 16, 12],
+  ['ferryPatras',  'Patras',            7, 18, 12],
+  ['rome',         'Rome',              7, 23, 13],
+  ['florence',     'Florence',          7, 29, 13],
+  ['venice',       'Venice',            8, 2,  13],
+  ['dolomites',    'Brixen, Dolomites',          8, 6,  13],
+  ['innsbruck',    'Innsbruck',         8, 7,  14],
+  ['munich',       'Munich',            8, 10, 15],
+  ['nuremberg',    'Nuremberg',         8, 20, 15],
+  ['village',      'Bad Staffelstein',  8, 21, 15, { v: 0 }],
+  ['heath',        'Bad Bevensen',      8, 25, 15],
+  ['lubeck',       'Lübeck',            8, 26, 15],
+  ['kosel',        'Kosel',             8, 27, 15],
+  ['ferryBaltic',  'Baltic Sea',        8, 27, 15, { sky: 'day' }],
+  ['middelfart',   'Middelfart',        8, 28, 16],
+  ['dusk',         'Nyborg',            8, 29, 16],
+];
+const SHOT_LIST = [
+  ...PLACES_ORDER.map(([kind, place, m, d, entered, o], i) => [i * PLACE, kind, place, m, d, entered, o]),
+  [T_SIGN, 'sign',   'Denmark',          8, 30, 16],
+  [T_HIT,  'nyhavn', 'Copenhagen',       8, 30, 16],
+  [T_MAP,  'map',    'KL to Copenhagen', 8, 30, 16],
+  [T_END,  'klEnd',  'Copenhagen',       8, 30, 16],
+];
+if (PLACES_ORDER.length !== NPLACES) throw new Error('NPLACES must equal PLACES_ORDER.length');
+const MON = ['DEC', 'JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG'], BEFORE = [-30, 1, 32, 61, 92, 122, 153, 183, 214];   // day number = BEFORE[m] + d (31 Dec 2023 is day 1)
+const RAYS = ([, kind, , , , entered]) => (kind === 'nyhavn' || kind === 'map' || kind === 'klEnd') ? 16 : entered - 1;   // stickers = countries completed: none at the start, the 16th lands on arrival
+const SD = SHOT_LIST.map(([t0, kind, place, m, d, entered, o], i) => ({
+  i, t0, t1: i + 1 < SHOT_LIST.length ? SHOT_LIST[i + 1][0] : DURATION, kind, place, entered, rays: RAYS(SHOT_LIST[i]), day: BEFORE[m] + d, date: d + ' ' + MON[m], ...(o || {}),
+  fresh: RAYS(SHOT_LIST[i]) > (i ? RAYS(SHOT_LIST[i - 1]) : 0),
+}));
+const SCENE_OF = SD.map((s) => () => drawShot(s));
+const ERA_LIST = SD.map((s) => [s.t0, s.t1, SCENE_OF[s.i]]);
+const SHOTS = SD.map((s) => [s.kind + '-' + s.i, s.i, s.t0, s.t1, s.place]);
+const TIMELINE = {
+  width: W, height: H, fps: FPS, bpm: BPM, gridOffset: GRID0, duration: DURATION, frames: NFRAMES, loop: LOOP_T, safe: SAFE, aspect: '16:9',
+  format: 'beat-cut',
+  shots: SHOTS.map(([key, era, t0, t1, title], i) => ({ id: i + 1, key, era, t0, t1, title })),
+  cuts: SD.slice(1).map((s) => s.t0),            // every era boundary is a hard cut, all on the beat
+  morphs: [],
+  cues: { silenceFrom: T_SIGN, hit: T_HIT, map: T_MAP, close: T_END },
+  acts: [
+    { name: '1 Ride out',      role: 'build',   t0: 0.0,    t1: 6 * PLACE },
+    { name: '2 Across Eurasia', role: 'journey', t0: 6 * PLACE, t1: T_SIGN },
+    { name: '3 Silence',       role: 'silence', t0: T_SIGN, t1: T_HIT },
+    { name: '4 Arrival',       role: 'gift',    t0: T_HIT,  t1: T_MAP },
+    { name: '5 The thread',    role: 'goodbye', t0: T_MAP,  t1: DURATION },
+  ],
+  board: [
+    [0.5,  'kl',           'KL dawn: the start',          'quiet pad, the rider motif'],
+    [0.5,  'paddy',        'Sekinchan: first ride',       'a pluck on the beat'],
+    [0.7,  'bangkok',      'Bangkok: a sticker lands',    'a rising pluck per border'],
+    [0.7,  'hatyai',       'Hat Yai',                     'groove'],
+    [0.7,  'terraces',     'Yuanyang terraces',           'groove'],
+    [0.7,  'chengdu',      'Chengdu: a panda',            'groove'],
+    [0.7,  'dujiangyan',   'Dujiangyan',                  'groove'],
+    [0.7,  'danxia',       'Zhangye Danxia',              'groove'],
+    [0.7,  'hami',         'Hami',                        'groove'],
+    [0.7,  'registan',     'Samarkand',                   'flat groove'],
+    [0.7,  'ferryCaspian', 'Caspian ferry',               'groove'],
+    [0.7,  'baku',         'Baku',                        'groove'],
+    [0.7,  'cappadocia',   'Cappadocia',                  'groove'],
+    [0.7,  'athens',       'Athens',                      'groove'],
+    [0.7,  'rome',         'Rome',                        'groove'],
+    [0.7,  'venice',       'Venice',                      'groove'],
+    [0.7,  'munich',       'Munich',                      'groove'],
+    [0.7,  'lubeck',       'Lübeck',                      'groove'],
+    [0.7,  'middelfart',   'Middelfart: the last border', 'groove'],
+    [0.7,  'dusk',         'Danish dusk',                 'groove, last bar'],
+    [0.8,  'sign',         'Dawn signpost: the silence',  'everything stops before the cut'],
+    [0.9,  'nyhavn',       'Payoff: Nyhavn',              'stab + sub, then a flat chord'],
+    [1.8,  'map',          'The whole thread',            'decay'],
+    [1.0,  'klEnd',        'The end is the start',        'fading'],
+  ].map(([off, kind, title, sound]) => ({ t: SD.find((s) => s.kind === kind).t0 + off, title, sound, next: 'cut on the beat' })),
+  narration: [],
+};
+window.TIMELINE = TIMELINE;

@@ -1,0 +1,10 @@
+{
+  "name": "kl-cph",
+  "title": "Kuala Lumpur to Copenhagen, by bike",
+  "format": { "width": 1920, "height": 1080, "fps": 24, "bpm": 120, "duration": 72.5, "frames": 1740 },
+  "formats": ["16:9"],
+  "storyFormat": "F5 fixed-hero journey (beat-cut: 1s shots, then 0.5s, 0.25s, a 16th rush, a silence, a held payoff)",
+  "style": "cut-paper",
+  "build": ["src/head.html", "kit/core.js", "style", "src/rider.js", "src/hero-person.js", "src/places-asia.js", "src/places-west.js", "src/places-europe.js", "src/places-more.js", "src/shots.js", "kit/morph.js", "kit/board.js", "kit/score-head.js", "src/score.js", "kit/score-tail.js"],
+  "review": { "safe": { "top": 60, "bottom": 110, "right": 60 }, "refs": {} }
+}
